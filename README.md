@@ -38,6 +38,9 @@ Import these user stories into a new project in the issue tracker of your choice
 * As a user, I need to be able see the total number of assassins
 * As a user, I need to be able to see the total number of contracts
 * As a user, I need to be able to add a new assassin
+* As a user, I need to be able to assign an assassin to a contract
+* As a user, I need to be able to complete a contract
+* As a user, I need to be able to remove an assassin from a contract
 
 ## Sample Data
 
@@ -81,17 +84,15 @@ Your app should accommodate and make use of all of the following sample data, wh
 
 You can use these wireframes as a reference.
 
-![Index](comps/Killbase_Homepage.png)
-![Assassins - List](comps/Killbase_Assassin_List.png)
-![Assassins - Read](comps/Killbase_Assassin_Read.png)
-![Assassins - New](comps/Killbase_Assassin_New.png)
-![Assassins - Edit](comps/Killbase_Assassin_Edit.png)
-![Assassins - Delete](comps/Killbase_Assassin_Delete.png)
-![Contracts - List](comps/Killbase_Contract_List.png)
-![Contracts - Read](comps/Killbase_Contract_Read.png)
-![Contracts - New](comps/Killbase_Contract_New.png)
-![Contracts - Edit](comps/Killbase_Contract_Edit.png)
-![Contracts - Delete](comps/Killbase_Contract_Delete.png)
+![Index](comps/Killbase_Home.png)
+![Assassins - List](comps/Killbase_Assassins_List.png)
+![Assassins - Read](comps/Killbase_Assassin_Detail.png)
+![Assassins - New](comps/Killbase_Add_Assassin.png)
+![Assassins - Edit](comps/Killbase_Edit_Assassin.png)
+![Contracts - List](comps/Killbase_Contracts_List.png)
+![Contracts - Read](comps/Killbase_Contract_Detail.png)
+![Contracts - New](comps/Killbase_Add_Contract.png)
+![Contracts - Edit](comps/Killbase_Edit_Contract.png)
 
 ## How to Submit Your Assessment
 
