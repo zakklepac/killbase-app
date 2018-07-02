@@ -9,7 +9,7 @@
 
 There may be some additional features, such as search, that are nice-to-haves, but a lower priority than the core features. Focus on the basic CRUD actions. The good people at Killbase have provided you some sample data from their existing registry that you can use for development.
 
-An example application can be found here: http://to.do/killbase
+An example application can be found here: https://killbase-galvanize.herokuapp.com/
 
 ## Import stories into Issue Tracker
 
