@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./partials/head') %>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="https://vignette.wikia.nocookie.net/shinobicraft/images/3/37/Konohagakure_symbol.png/revision/latest?cb=20140220160642" height="100" width="100">
+      </a>
+      </div>
+      <h1><a href="/">NINJABASE</a></h1>
+      <a href="/ninjas">Ninjas | </a>
+      <a href="/ninjas/new">New Ninja | </a>
+      <a href="/contracts">Contracts | </a>
+      <a href="/contracts/new">New Contract</a>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <h1><center>NINJA</center></h1>
+    <div class="row">
+      <div class="col col-sm-12">
+        <ul>
+          <% ninja.forEach(function(ninja) { %>
+            <div class="nin row">
+              <div class="col col-sm-4">
+                <li><strong>Name:</strong>
+                  <%= ninja.full_name %>
+                </li>
+                <li><strong>Team Name:</strong>
+                  <%= ninja.team_name %>
+                </li>
+                <li><strong>Contact Info:</strong>
+                  <%= ninja.contact_info %>
+                </li>
+                <li><strong>Weapon:</strong>
+                  <%= ninja.weapon%>
+                </li>
+              </div>
+              <div class="col col-sm-4">
+                <li><strong>Age:</strong>
+                  <%= ninja.age%>
+                </li>
+                <li><strong>Price:</strong>
+                  <%= ninja.price%>
+                </li>
+                <li><strong>Rating:</strong>
+                  <%= ninja.rating%>
+                </li>
+                <li><strong>Kills:</strong>
+                  <%= ninja.kills%>
+                </li>
+              </div>
+              <div class="col col-sm-4">
+
+                <a href="/ninjas/<%= ninjas.nin_id%>/edit">
+                <button type="button" class="btn btn-primary">Edit</button>
+              </a>
+
+
+                  <button type="button" class="btn btn-primary">Delete</button>
+                
+
+
+
+              </div>
+            </div>
+            <% }); %>
+        </ul>
+
+
+        <h1><center>ACTIVE CONTRACTS</center></h1>
+        <div class="row">
+          <div class="col col-sm-12">
+            <ul>
+              <% ninja.forEach(function(active) { %>
+                <div class="activeCon row">
+                  <div class="col col-sm-4">
+                    <li><strong>Target Name:</strong>
+                      <%= active.target %>
+                    </li>
+                    <li><strong>Client Name:</strong>
+                      <%= active.client %>
+                    </li>
+                  </div>
+                  <div class="col col-sm-4">
+                    <li><strong>Location:</strong>
+                      <%= active.location%>
+                    </li>
+                    <li><strong>Security Level:</strong>
+                      <%= active.sec_level%>
+                    </li>
+
+                  </div>
+                </div>
+                <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <%- include('./partials/scripts') %>
+</body>
+
+</html>

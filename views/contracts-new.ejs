@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./partials/head') %>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="https://vignette.wikia.nocookie.net/shinobicraft/images/3/37/Konohagakure_symbol.png/revision/latest?cb=20140220160642" height="100" width="100">
+        </a>
+      </div>
+      <h1><a href="/">NINJABASE</a></h1>
+      <a href="/ninjas">Ninjas | </a>
+      <a href="/contracts">Contracts | </a>
+      <a href="/ninjas/new">New Ninja</a>
+
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12">
+        <h1> <center>CREATE NEW CONTRACT</center></h1>
+        <form class="newForm" action="/contracts" method="POST">
+          <div class="row">
+            <div class="col col-sm-4">
+
+              <div class="form-updateNin">
+                <label>Target Name</label>
+                <input name="target_name" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Client Name</label>
+                <input name="client_name" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Location</label>
+                <input name="location" placeholder="">
+              </div>
+
+            </div>
+
+
+            <div class="col col-sm-4">
+              <div class="form-updateNin">
+                <label>Budget</label>
+                <input name="budget" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Security Level</label>
+                <input name="sec_level" placeholder="">
+              </div>
+
+
+            </div>
+
+            <button name="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <%- include('./partials/scripts') %>
+</body>
+
+</html>

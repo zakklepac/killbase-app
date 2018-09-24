@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./partials/head') %>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="https://vignette.wikia.nocookie.net/shinobicraft/images/3/37/Konohagakure_symbol.png/revision/latest?cb=20140220160642" height="100" width="100">
+        </a>
+      </div>
+      <h1><a href="/">NINJABASE</a></h1>
+      <a href="/ninjas">Ninjas | </a>
+      <a href="/contracts">Contracts | </a>
+      <a href="/contracts/new">New Contract</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12">
+        <h1><center>CREATE NEW NINJA</center></h1>
+
+        <form class="newForm" action="/ninjas" method="POST">
+
+          <div class="row">
+            <div class="col col-sm-4">
+
+              <div class="form-updateNin">
+                <label>Name</label>
+                <input name="full_name" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Code Name</label>
+                <input name="code_name" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Contact Info</label>
+                <input name="contact_info" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Weapon</label>
+                <input name="weapon" placeholder="">
+              </div>
+            </div>
+            <div class="col col-sm-4">
+              <div class="form-updateNin">
+                <label>Age</label>
+                <input name="age" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Price</label>
+                <input name="price" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Rating</label>
+                <input name="rating" placeholder="">
+              </div>
+
+              <div class="form-updateNin">
+                <label>Kills</label>
+                <input name="kills" placeholder="">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+        <%- include('./partials/scripts') %>
+</body>
+
+</html>

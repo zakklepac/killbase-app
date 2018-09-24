@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('./partials/head') %>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+        <img alt="Brand" src="https://vignette.wikia.nocookie.net/shinobicraft/images/3/37/Konohagakure_symbol.png/revision/latest?cb=20140220160642" height="100" width="100">
+      </a>
+      </div>
+      <h1><a href="/">NINJABASE</a></h1>
+      <a href="/ninjas">Ninjas | </a>
+      <a href="/ninjas/new">New Ninja | </a>
+      <a href="/contracts">Contracts | </a>
+      <a href="/contracts/new">New Contract</a>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <h1><center>CONTRACT</center></h1>
+    <div class="row">
+      <div class="col col-sm-12">
+        <ul>
+          <% contract.forEach(function(contract) { %>
+            <div class="con row">
+              <div class="col col-sm-4">
+                <li><strong>Target Name:</strong>
+                  <%= contract.target %>
+                </li>
+                <li><strong>Client Name:</strong>
+                  <%= contract.client %>
+                </li>
+              </div>
+              <div class="col col-sm-4">
+                <li><strong>Budget:</strong>
+                  <%= contract.budget %>
+                </li>
+                <li><strong>Location:</strong>
+                  <%= contract.location%>
+                </li>
+                <li><strong>Security Level:</strong>
+                  <%= contract.sec_level%>
+                </li>
+              </div>
+              <div class="col col-sm-4">
+                <a href="/contracts/<%= contract.contract_id%>/edit">
+              <button type="button" class="btn btn-primary">Edit</button>
+            </a>
+
+                <button type="button" class="btn btn-primary">Delete</button>
+
+                <button type="button" class="btn btn-primary">Complete</button>
+              </div>
+            </div>
+            <% }); %>
+        </ul>
+      </div>
+    </div>
+    <h1><center>CONTRACTED NINJAS</center></h1>
+    <div class="row">
+      <div class="col col-sm-12">
+        <ul>
+          <% contract.forEach(function(contract) { %>
+            <div class="ninCon row">
+              <div class="col col-sm-4">
+                <li><strong>Name:</strong>
+                  <%= contract.full_name %>
+                </li>
+                <li><strong>Code Name:</strong>
+                  <%= contract.code_name %>
+                </li>
+                <li><strong>Rating:</strong>
+                  <%= contract.rating %>
+                </li>
+              </div>
+              <div class="col col-sm-4">
+              </div>
+              <div class="col col-sm-4">
+                <button type="button" class="btn btn-primary">Remove</button>
+              </div>
+            </div>
+            <% }); %>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('./partials/scripts') %>
+</body>
+
+</html>
